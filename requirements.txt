@@ -1,0 +1,6 @@
+smolagents
+transformers
+torch
+radon
+flake8
+bandit
