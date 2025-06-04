@@ -22,6 +22,7 @@ def main():
         help='Path to the Python repository to analyze'
     )
     args = parser.parse_args()
+    print(args.path)
     run_analysis(args.path)
 
 

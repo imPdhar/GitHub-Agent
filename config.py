@@ -1,7 +1,7 @@
-REPO_PATH = './myrepo'
+REPO_PATH = 'path\Library-Management-System-main'
 
 # Model identifier (local or HF API)
-MODEL_ID = 'bigcode/starcoder-base'
+# MODEL_ID = 'nvidia/Llama-3.1-Nemotron-Nano-4B-v1.1'
 
 # Linter commands
 FLAKE8_ARGS = ['--statistics', '--exit-zero']
