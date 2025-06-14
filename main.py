@@ -6,7 +6,23 @@ from config import REPO_PATH
 def run_analysis(path: str):
     prompt = (
         f"Analyze the Python project at '{path}' for performance, style, and security issues. "
-        "Provide a structured report grouped by category and severity."
+        "After it, do not forget to provide a structured report grouped by category and severity in the following format: \n"
+        """Project Analysis Report:
+        I. Style Issues:
+        - Output gathered by flake8 (see full output for details).
+        - Severity: Based on output gathered 
+
+        II. Security Issues:
+        - Bandit scan found X security vulnerabilities (where X is no or an integer number).
+        - Severity: N/A or Mild or Severe 
+
+        III. Performance Issues:
+        - Tool used was (something).
+        - Output gathered by the tool (see full output for details).
+
+        IV. Complexity Analysis:
+        - Automated complexity analysis and description.
+        - Related comments."""
     )
     report = agent.run(prompt)
     print(report)

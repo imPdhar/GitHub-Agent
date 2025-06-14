@@ -16,7 +16,7 @@ if mode == "Transformers":
         trust_remote_code=True
     )
 elif mode == "Ollama":
-    MODEL_ID = 'ollama_chat/llama3.2:3b'
+    MODEL_ID = 'ollama_chat/gemma3:12b'
     engine = LiteLLMModel(
         model_id=MODEL_ID,
         api_base="http://127.0.0.1:11434",
@@ -70,6 +70,6 @@ agent = CodeAgent(
     tools=tools,
     model=engine,
     additional_authorized_imports=[
-        'os', 'subprocess', 'radon.complexity', 'open'
+        'os', 'subprocess', 'radon.complexity', 'open', 'ntpath'
     ]
 )

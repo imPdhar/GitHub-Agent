@@ -54,4 +54,10 @@ def analyze_complexity(path: str) -> dict:
     with open(path, 'r', encoding='utf-8') as f:
         code = f.read()
     results = cc_visit(code)
-    return {item.name: item.complexity for item in results}
+    # Old return format (dict):
+    # return {item.name: item.complexity for item in results}
+    # New return format (list of dicts):
+    return [
+        {'name': item.name, 'cyclomatic_complexity': item.complexity}
+        for item in results
+    ]

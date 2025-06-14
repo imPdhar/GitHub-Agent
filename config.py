@@ -1,4 +1,4 @@
-REPO_PATH = 'path\Library-Management-System-main'
+REPO_PATH = 'path\\Library-Management-System-main'
 
 # Model identifier (local or HF API)
 # MODEL_ID = 'nvidia/Llama-3.1-Nemotron-Nano-4B-v1.1'
