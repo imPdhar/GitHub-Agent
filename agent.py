@@ -1,11 +1,8 @@
 from smolagents import CodeAgent
 from smolagents import TransformersModel, LiteLLMModel
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-import torch
 
 
-mode = "Ollama"  # or "LiteLLM"
-# MODEL_ID = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+mode = "Ollama"  #Ollama works better LOL
 if mode == "Transformers":
     MODEL_ID = "HuggingFaceTB/SmolLM-135M-Instruct"
     engine = TransformersModel(
@@ -24,32 +21,6 @@ elif mode == "Ollama":
         num_ctx=8192
     )
 
-# tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
-# model     = AutoModelForCausalLM.from_pretrained(
-#     MODEL_ID,
-#     device_map="cuda",            # GPU if available
-#     torch_dtype="auto"            # fp16 / bf16 when possible
-# )
-
-# hf_pipeline = pipeline(
-#     "text-generation",
-#     model=model,
-#     tokenizer=tokenizer,
-#     max_new_tokens=1024,
-#     do_sample=True,
-#     temperature=0.2
-# )
-
-# engine = TransformersModel(pipeline=hf_pipeline)
-# engine = TransformersModel(
-#     model_id=MODEL_ID,
-#     device_map="cuda",
-#     max_new_tokens=1000,
-#     do_sample=True,
-#     trust_remote_code=True
-# )
-
-# Import your tools
 from tools import (
     list_python_files,
     read_file,

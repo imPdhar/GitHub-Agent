@@ -9,12 +9,12 @@ def run_analysis(path: str):
         "After it, do not forget to provide a structured report grouped by category and severity in the following format: \n"
         """Project Analysis Report:
         I. Style Issues:
-        - Output gathered by flake8 (see full output for details).
-        - Severity: Based on output gathered 
+        - Tell all issues found by flake8, grouped by severity)
+        - Severity: None or Mild or Severe  (Based on output gathered)
 
         II. Security Issues:
         - Bandit scan found X security vulnerabilities (where X is no or an integer number).
-        - Severity: N/A or Mild or Severe 
+        - Severity: None or Mild or Severe 
 
         III. Performance Issues:
         - Tool used was (something).
@@ -22,7 +22,14 @@ def run_analysis(path: str):
 
         IV. Complexity Analysis:
         - Automated complexity analysis and description.
-        - Related comments."""
+        - Related comments.
+
+        V. Suggested code changes:
+        - Change this in file X.py: (where X is the file name) to improve performance, style, or security.
+        - Change this in file Y.py: (where Y is the file name) to improve performance, style, or security.
+        - Change this in file Z.py: (where Z is the file name) to improve performance, style, or security.
+        and so on for all the files in the project.       
+        """
     )
     report = agent.run(prompt)
     print(report)
