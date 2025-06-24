@@ -1,4 +1,4 @@
-REPO_PATH = 'path\\Library-Management-System-main'
+REPO_PATH = 'path//Library-Management-System-main'
 
 # Model identifier (local or HF API)
 # MODEL_ID = 'nvidia/Llama-3.1-Nemotron-Nano-4B-v1.1'
@@ -10,8 +10,8 @@ FLAKE8_ARGS = ['--statistics', '--exit-zero']
 BANDIT_ARGS = ['-r', '-q', '-f', 'json']
 
 # Agent categories and severities settings (optional extension)
-CATEGORY_SEVERITIES = {
-    'performance': ['High', 'Medium', 'Low'],
-    'style': ['Medium', 'Low'],
-    'security': ['High', 'Medium', 'Low']
-}
+# CATEGORY_SEVERITIES = {
+#     'performance': ['High', 'Medium', 'Low'],
+#     'style': ['Medium', 'Low'],
+#     'security': ['High', 'Medium', 'Low']
+# }

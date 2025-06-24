@@ -25,9 +25,9 @@ def run_analysis(path: str):
         - Related comments.
 
         V. Suggested code changes:
-        - Change this in file X.py: (where X is the file name) to improve performance, style, or security.
-        - Change this in file Y.py: (where Y is the file name) to improve performance, style, or security.
-        - Change this in file Z.py: (where Z is the file name) to improve performance, style, or security.
+        - Change this to this (where this is the suggested code change) in file X.py: (where X is the file name) to improve performance, style, or security.
+        - Change this to this (where this is the suggested code change) in file Y.py: (where Y is the file name) to improve performance, style, or security.
+        - Change this to this (where this is the suggested code change) in file Z.py: (where Z is the file name) to improve performance, style, or security.
         and so on for all the files in the project.       
         """
     )
